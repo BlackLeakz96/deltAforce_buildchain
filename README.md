@@ -1,2 +1,3 @@
-# deltAforce_buildchain
-Buildchain for bootloader rootfs kernel
+#######################################################
+# deltAf0rce-os is an unix based os in build progress #
+# Author: BlackLeakz

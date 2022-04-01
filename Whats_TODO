@@ -1,0 +1,62 @@
+
+ LINUX-EMBEDDED-SYSTEM          || DEVICE-TREE ||
+
+  || BOOTLOADER || - || LINUX-KERNEL ||
+
+  || ROOT-Filesystem ||
+  ||Init-Process|| ||Libarys libc|| ||Device-Nodes|| || Shell-Programm-Dämonen || || Konfiguration ||
+  ||sbin/init   || ||   /lib/    || ||   /dev     || ||       /bin             || ||      /etc     ||
+                                                     ||       /sbin            ||
+                                                     ||       /usr/bin         ||
+
+
+
+
+Inhaltsverzeichnis
+  (1) Grundlegender Aufbau eines Linux-Systems.
+
+  (2) Bootloader
+
+  (3) ToolChain
+
+
+(1)
+
+Woraus besteht ein Linux-System?
+Linux-Systeme bestehen aus drei Komponenten: Bootloader, Linux-Kernel und Root-Filesystem.
+
+  .1 Bootloader
+  .2 Linux-Kernel
+  .3 Root-Filesystem
+
+
+
+
+(2)
+
+  Liste von Bootloadern:
+
+  1- grub
+  2- u-boot
+  3- barebox
+  4- syslinux
+
+
+(3)
+
+  TOOLCHAIN
+
+  crosstool-ng, buildroot, yocto und elbe.
+
+Mit crosstool-ng kann eine Cross-Toolchain für ein Target-System erstellt werden. Die anderen Komponenten (Bootloader, Kernel, Root-Filesystem) können damit nicht erstellt werden.
+
+Bei buildroot ist der komplette Erstellvorgang mit allen Komponenten abgebildet. Dieser wird mittels einer semigraphischen Oberfläche eingestellt und mit Makefiles durchgeführt.
+
+yocto hingegen arbeitet mit sogenannten Rezepten. Diese beinhalten die Erstellvorschriften für die einzelnen Komponenten. Beim Erstellen werden dann diese Rezepte mit dem Tool bitbake abgearbeitet.
+
+Mit elbe wird das Embedded-System nicht "from-the-scratch" erstellt, sondern mithilfe von debootstrap in einer virtualisieren Umgebung das Zielsystem aus Debian-Paketen heraus erstellt.
+
+
+(4)
+  Root-Filesystem
+  Building mithilfe von Budybox
