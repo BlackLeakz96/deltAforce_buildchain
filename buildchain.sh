@@ -1,25 +1,26 @@
-#!/usr/bin/env bash
+#!/bin/bash
 # buildchain.sh
 
 
 sudo pacman -Syyuu;
-$p = "sudo pacman -Sy "
-$p which;
-$p sed curl;
-$p make binutils;
-#build-essential (only for Debian based systems)
-$p gcc;
-$p g++;
-sudo pacman -Sy bash patch gzip bzip2 perl tar cpio unzip rsync;
-sudo pacman -Sy file bc;
-sudo pacman -Sy sudo dhcpcd wget;
-sudo pacman -Sy python python3 python-pip;
-sudo pacman -Sy bazaar;
-sudo pacman -Sy cvs;
-sudo pacman -Sy mercurial;
-sudo pacman -Sy rsync;
-sudo pacman -Sy scp;
-sudo pacman -Sy subversion;
+sudo pacman -Sy sh bash
+
+sudo pacman -Sy which
+sudo pacman -Sy sed curl
+sudo pacman -Sy make binutils
+
+sudo pacman -Sy gcc git
+sudo pacman -Sy g++
+sudo pacman -Sy bash patch gzip bzip2 perl tar cpio unzip rsync
+sudo pacman -Sy file bc
+sudo pacman -Sy sudo dhcpcd wget
+sudo pacman -Sy python python3 python-pip
+sudo pacman -Sy bazaar
+sudo pacman -Sy cvs
+sudo pacman -Sy mercurial
+sudo pacman -Sy rsync
+sudo pacman -Sy scp
+sudo pacman -Sy subversion
 sudo pacman -Sy arch-install-scripts
 sudo pacman -Sy awk
 sudo pacman -Sy dosfstools
@@ -31,13 +32,13 @@ sudo pacman -Sy libisoburn
 sudo pacman -Sy mtools
 sudo pacman -Sy openssl
 sudo pacman -Sy pacman
-sudo pacman -Sy sed;
-sudo pacman -Sy squashfs-tools;
+sudo pacman -Sy sed
+sudo pacman -Sy squashfs-tools
 sudo pacman -Sy edk2-ovmf
-sudo pacman -Sy qemu;
+sudo pacman -Sy qemu
 
 
-sudo useradd delta;
+sudo useradd delta
 sudo gpasswd -a delta wheel;
 sudo mkdir /home/delta;
 sudo su delta
